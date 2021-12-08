@@ -1,10 +1,12 @@
 import React from 'react';
 import './App.css';
+import RickAndMorty from "./components/RickAndMorty";
 
 function App() {
   return (
     <div className="App">
-      Async Redux Project
+        <h1>Get a Character🧝🏻‍♂️</h1>
+        <RickAndMorty />
     </div>
   );
 }

@@ -1,20 +1,18 @@
 import { FETCH_START, FETCH_SUCCESS, FETCH_FAIL } from '../actions';
 
 const initialState = {
-    car: {
-        Make_ID: "",
-        Make_Name: ""
-    },
+    characters: [],
     isFetching: false,
     error: ''
 };
+
 
 export const reducer = (state = initialState, action) => {
     switch (action.type) {
         case(FETCH_START):
             return({
                 ...state,
-                car: {},
+                characters: [],
                 isFetching: true,
                 error:''
             });
@@ -22,7 +20,7 @@ export const reducer = (state = initialState, action) => {
         case(FETCH_SUCCESS):
             return({
                 ...state,
-                car: action.payload,
+                characters: action.payload,
                 isFetching: false,
                 error:''
             });
@@ -30,7 +28,7 @@ export const reducer = (state = initialState, action) => {
         case(FETCH_FAIL):
             return({
                 ...state,
-                car: {},
+                characters: [],
                 isFetching: false,
                 error: action.payload
             });
