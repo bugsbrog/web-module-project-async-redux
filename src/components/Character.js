@@ -1,4 +1,5 @@
 import React from "react";
+import './../Character.css'
 
 const Character = (props) => {
     const { character } = props
@@ -9,7 +10,8 @@ const Character = (props) => {
             </div>
             <div className="character-information">
                 <h2>{character.name}</h2>
-                <h3>{character.species}</h3>
+                <h3>{character.status}</h3>
+                <h4>{character.species}</h4>
         </div>
         </div>
     )
